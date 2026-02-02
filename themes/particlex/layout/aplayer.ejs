@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<div id="music-container">
+  <meting-js
+    server="netease"
+    type="playlist"
+    id="7001312379" 
+    fixed="false"
+    mini="false"
+    list-folded="true"
+    autoplay="false">
+  </meting-js>
+</div>
+
+<style>
+  #music-container {
+    position: fixed;
+    top: 70px;
+    right: -70px;
+    width: 450px;
+    height: 90px; /* 初始高度保持与播放器主体一致 */
+    border-radius: 50px;
+    z-index: 1000000;
+    overflow: hidden; /* 这里保留 hidden，动画才会有收缩感 */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.9;
+  }
+
+  /* 展开状态：高度必须足够大才能显示歌单 */
+  #music-container.show-list {
+    height: 340px; /* 歌单展开后的总高度 */
+  }
+
+  /* 确保 APlayer 列表本身不被隐藏 */
+  .aplayer .aplayer-list {
+    display: block !important; /* 强制显示列表 */
+    opacity: 1 !important;
+  }
+
+  .aplayer {
+    position: absolute;
+    width: 380px;
+    height: auto; 
+    border-radius: 50px 0 0 50px;
+    margin: 0 !important;
+  }
+
+  .aplayer-pic {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    animation: rotate-play 10s linear infinite;
+  }
+
+  @keyframes rotate-play {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .aplayer-info {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: center;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('music-container');
+  let autoCloseTimer = null;
+
+  container.addEventListener('click', function(e) {
+    const menuBtn = e.target.closest('.aplayer-icon-menu');
+    if (menuBtn) {
+      container.classList.toggle('show-list');
+    }
+  });
+});
+</script>
