@@ -9,6 +9,7 @@ background:
     - /images/background0.jpg
     - /images/background1.jpg
     - /images/background2.jpg
+    - /images/background3.jpg
 
 # Loading image
 loading: /images/loading.gif
@@ -34,11 +35,11 @@ menu:
         name: id-card
         theme: solid
         link: /about
-    资源:
+    归档:
         name: box-archive
         theme: solid
         link: /archives
-    分享:
+    分类:
         name: bookmark
         theme: solid
         link: /categories
@@ -54,6 +55,22 @@ card:
         描述：
         咸鱼一枚
     iconLinks:
+        github_link:
+            link: https://github.com/33026294
+            theme: brands       
+            name: github       
+        qq_link:
+            link: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3332674145
+            theme: brands       
+            name: qq
+        mail_link:
+            link: 3332674145@qq.com
+            theme: solid
+            name: envelope
+        bilibili_link:
+            link: https://space.bilibili.com/650094689
+            theme: brands
+            name: bilibili
     friendLinks:
         North: https://galgameblog.com
 
@@ -93,24 +110,24 @@ crypto:
 
 # Search
 search:
-    enable: false
+    enable: true
 
 # giscus
 # https://github.com/giscus/giscus
 giscus:
-    enable: false
+    enable: true
     src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
+    repo: 33026294/shareblog
+    repoID: R_kgDORGxSLg
+    category: Announcements
+    categoryID: DIC_kwDORGxSLs4C10hQ
     mapping: pathname
     strict: 0
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: bottom
     theme: preferred_color_scheme
-    lang:
+    lang: zh-CN
 
 # Gitalk
 # https://github.com/gitalk/gitalk

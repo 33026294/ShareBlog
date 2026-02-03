@@ -1,6 +1,10 @@
 ---
 title: 你好，世界！
 date: 2026-02-02
+tags:
+    - hexo
+categories:
+    - 帮助
 ---
 欢迎使用[Hexo](https://hexo.io/)！这是您的第一篇帖子。请查看[文档](https://hexo.io/docs/)了解更多信息。如果您在使用 Hexo 时遇到任何问题，可以在[故障排除](https://hexo.io/docs/troubleshooting.html)页面找到答案，或者您也可以在[GitHub](https://github.com/hexojs/hexo/issues)上向我提问。
 
@@ -13,6 +17,8 @@ $ hexo new "我的新帖子"
 ```
 
 详细信息: [创建](https://hexo.io/docs/writing.html)
+
+<!-- more -->
 
 ### 运行服务器
 
