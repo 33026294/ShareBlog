@@ -60,11 +60,11 @@ card:
             theme: brands       
             name: github       
         qq_link:
-            link: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3332674145
+            link: http://wpa.qq.com/msgrd?v=3&uin=3332674145&site=qq&menu=yes
             theme: brands       
             name: qq
         mail_link:
-            link: 3332674145@qq.com
+            link: mailto:3332674145@qq.com
             theme: solid
             name: envelope
         bilibili_link:
